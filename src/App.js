@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import ListaDeTareas from './componentes/ListaDeTareas';
 import Capibara from './componentes/Capibara';
