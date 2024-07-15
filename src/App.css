@@ -1,0 +1,160 @@
+:root {
+  --texto: #f0ece9;
+  --background: #17110d;
+  --primario: #d3ad98;
+  --secundario: #7A4528;
+  --acento: #D47E4F;
+  --acento2: #8A9A5B;
+  --acento3: #556B2F;
+}
+@font-face {
+  font-family: 'TAN Nimbus';
+  src: url('./fuentes/TAN-NIMBUS.otf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  color: var(--texto);
+  background-image: url('./imagenes/capibarafondito.jpg') ;
+  font-family: Lato, sans-serif;
+  margin-top: 40px;
+}
+
+.titulo-tarea {
+  color: var(--texto);
+  font-family: 'TAN Nimbus', sans-serif;
+  text-align: center;
+  margin: 20px 0;
+  cursor: default;
+  transition: color 0.3s ease;
+}
+
+.titulo-tarea:hover {
+  color: var(--acento2);
+
+}
+
+.aplicacion-tareas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Logo de FreeCodeCamp */
+
+.logo-contenedor-tareas {
+  width: 100%;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-tareas {
+  width: 550px;
+  font-family: 'TAN Nimbus', sans-serif;
+  height: fit-content;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+  transition: color 0.3s ease;
+}
+
+.logo-tareas:hover {
+  color: var(--acento2);
+}
+
+/* Lista de tareas */
+
+.tareas-lista-principal {
+  position: relative; /* Asegura que los elementos posicionados dentro se refieran a este contenedor */
+  width: 600px;
+  min-height: 500px;
+  background-color: var(--secundario);
+  padding: 25px;
+  margin: 10px;
+  border-radius: 26px;
+}
+
+.capibara-contenedor {
+  position: absolute;
+  bottom: 10px; /* Ajusta esta propiedad según sea necesario */
+  right: 10px; /* Ajusta esta propiedad según sea necesario */
+  cursor: pointer;
+}
+
+.capibara-imagen {
+  width: 100px; /* Ajusta el tamaño según sea necesario */
+  transition: transform 0.5s;
+}
+
+.capibara-contenedor::after {
+  content: '';
+  position: absolute;
+  bottom: -10px; /* Ajusta esta propiedad según sea necesario */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px; /* Ajusta el tamaño según sea necesario */
+  height: 20px; /* Ajusta el tamaño según sea necesario */
+  background: rgba(0, 0, 0, 0.3); /* Color de la sombra */
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.capibara-contenedor:hover .capibara-imagen {
+  transform: translateX(-10px);
+}
+
+.zzzz {
+  position: absolute;
+  top: -20px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.zzzz span {
+  font-size: 14px;
+  color: #bbb;
+  animation: float 2s infinite;
+}
+
+.zzzz span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.zzzz span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.zzzz span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.zzzz span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-10px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
