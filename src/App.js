@@ -1,8 +1,12 @@
+import React, { useState } from 'react';
 import './App.css';
 import ListaDeTareas from './componentes/ListaDeTareas';
 import Capibara from './componentes/Capibara';
 
 function App() {
+
+  const [hasError, setHasError] = useState(false);
+
   return (
       <div className='aplicacion-tareas'>
         <div className='logo-contenedor-tareas'>
@@ -10,8 +14,8 @@ function App() {
         </div>
         <div className='tareas-lista-principal'>
           <h1 className='titulo-tarea'>Mis Tareas</h1>
-          <ListaDeTareas />
-          <Capibara />
+          <ListaDeTareas setHasError={setHasError} />
+          <Capibara hasError={hasError} />
         </div>
       </div>
   );

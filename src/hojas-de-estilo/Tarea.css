@@ -46,3 +46,16 @@
   background-color: #d3ad98;
   text-decoration: line-through;
 }
+.tarea-contenedor-iconos {
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-between;
+  row-gap: 2px;
+}
+
+.error {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}

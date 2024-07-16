@@ -1,0 +1,37 @@
+.capi-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 300px;
+    background-color: #d3ad98;
+    padding: 25px;
+    margin: 10px;
+    border-radius: 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+}
+
+.capi-modal p {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.capi-modal button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #8A9A5B;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'TAN Nimbus', sans-serif;
+}
+
+.capi-modal button:hover {
+    background-color: #3f4f23;
+}
