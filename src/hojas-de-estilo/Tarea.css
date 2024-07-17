@@ -1,3 +1,11 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
 .tarea-contenedor {
   width: 500px;
   min-height: 65px;
@@ -10,6 +18,7 @@
   border-radius: 7px;
   border: 1px solid white;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 /* Colores */
@@ -18,7 +27,7 @@
 }
 
 .tarea-contenedor:nth-child(3n + 2) {
-  background-color: #556B2F ;
+  background-color: #556B2F;
 }
 
 .tarea-contenedor:nth-child(3n + 3) {
@@ -41,11 +50,11 @@
 }
 
 /* Estilo para cuando una tarea fue completada */
-
 .tarea-contenedor.completada {
   background-color: #d3ad98;
   text-decoration: line-through;
 }
+
 .tarea-contenedor-iconos {
   display: flex;
   flex-wrap: nowrap;
@@ -58,4 +67,59 @@
   color: red;
   font-size: 0.8rem;
   margin-top: 0.5rem;
+}
+
+/* Media Queries */
+@media (max-width: 1920px) {
+  .tarea-contenedor {
+    width: 80%;
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .tarea-contenedor {
+    width: 70%;
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .tarea-contenedor {
+    width: 60%;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tarea-contenedor {
+    width: 90%;
+    max-width: 500px;
+  }
+
+  .tarea-texto {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tarea-contenedor {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .tarea-texto {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 320px) {
+  .tarea-contenedor {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .tarea-texto {
+    font-size: 14px;
+  }
 }

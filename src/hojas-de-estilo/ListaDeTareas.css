@@ -4,3 +4,16 @@
     justify-content: center;
     margin-top: 15px;
 }
+
+@media (max-width: 768px) {
+.tareas-lista-contenedor {
+    flex-direction: column;
+    align-items: center;
+}
+}
+
+@media (max-width: 480px) {
+.tareas-lista-contenedor {
+    width: 100%;
+}
+}

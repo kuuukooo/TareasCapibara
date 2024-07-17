@@ -35,3 +35,35 @@
 .capi-modal button:hover {
     background-color: #3f4f23;
 }
+
+@media (max-width: 768px) {
+    .capi-modal {
+    width: 90%;
+    height: auto;
+    padding: 15px;
+    }
+
+    .capi-modal p {
+    font-size: 1rem;
+    }
+
+    .capi-modal button {
+    padding: 10px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .capi-modal {
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    }
+
+    .capi-modal p {
+    font-size: 0.9rem;
+    }
+
+    .capi-modal button {
+    padding: 8px 10px;
+    }
+}

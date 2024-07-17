@@ -27,3 +27,15 @@
   color: #f0ece9;
   text-transform: capitalize;
 }
+
+@media (max-width: 480px) {
+.tarea-input {
+  width: 70%;
+  font-size: 14px;
+}
+
+.tarea-boton {
+  padding: 12px;
+  font-size: 14px;
+}
+}

@@ -7,6 +7,7 @@
   --acento2: #8A9A5B;
   --acento3: #556B2F;
 }
+
 @font-face {
   font-family: 'TAN Nimbus';
   src: url('./fuentes/TAN-NIMBUS.otf');
@@ -20,9 +21,13 @@
 
 html, body {
   color: var(--texto);
-  background-image: url('./imagenes/capibarafondito.jpg') ;
+  background-image: url('./imagenes/capibarafondito.jpg');
   font-family: Lato, sans-serif;
   margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .titulo-tarea {
@@ -36,7 +41,6 @@ html, body {
 
 .titulo-tarea:hover {
   color: var(--acento2);
-
 }
 
 .aplicacion-tareas {
@@ -44,9 +48,9 @@ html, body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
-/* Logo de FreeCodeCamp */
 
 .logo-contenedor-tareas {
   width: 100%;
@@ -73,9 +77,8 @@ html, body {
 }
 
 /* Lista de tareas */
-
 .tareas-lista-principal {
-  position: relative; /* Asegura que los elementos posicionados dentro se refieran a este contenedor */
+  position: relative;
   width: 600px;
   min-height: 500px;
   background-color: var(--secundario);
@@ -86,25 +89,25 @@ html, body {
 
 .capibara-contenedor {
   position: absolute;
-  bottom: 10px; /* Ajusta esta propiedad según sea necesario */
-  right: 10px; /* Ajusta esta propiedad según sea necesario */
+  bottom: 10px;
+  right: 10px;
   cursor: pointer;
 }
 
 .capibara-imagen {
-  width: 100px; /* Ajusta el tamaño según sea necesario */
+  width: 100px;
   transition: transform 0.5s;
 }
 
 .capibara-contenedor::after {
   content: '';
   position: absolute;
-  bottom: -10px; /* Ajusta esta propiedad según sea necesario */
+  bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
-  width: 70px; /* Ajusta el tamaño según sea necesario */
-  height: 20px; /* Ajusta el tamaño según sea necesario */
-  background: rgba(0, 0, 0, 0.3); /* Color de la sombra */
+  width: 70px;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.3);
   border-radius: 50%;
   z-index: -1;
 }
@@ -156,5 +159,100 @@ html, body {
   100% {
     transform: translateY(0);
     opacity: 0;
+  }
+}
+
+/* Media Queries */
+@media (max-width: 1920px) {
+  .tareas-lista-principal {
+    width: 80%;
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .tareas-lista-principal {
+    width: 70%;
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .tareas-lista-principal {
+    width: 60%;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-tareas {
+    width: 90%;
+    font-size: 1.5rem;
+  }
+
+  .tareas-lista-principal {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .capibara-imagen {
+    width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-tareas {
+    width: 90%;
+    font-size: 1.2rem;
+  }
+
+  .tareas-lista-principal {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .capibara-imagen {
+    width: 60px;
+  }
+}
+
+@media (max-width: 500px) {
+  html, body {
+    margin-top: 0;
+  }
+
+  .titulo-tarea {
+    font-size: 1.5rem;
+  }
+
+  .logo-tareas {
+    width: 80%;
+    font-size: 1rem;
+  }
+
+  .tareas-lista-principal {
+    width: 400px;
+    padding: 10px;
+    margin: 5px;
+  }
+
+  .capibara-imagen {
+    width: 50px;
+  }
+}
+
+@media (max-width: 320px) {
+  .logo-tareas {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  .tareas-lista-principal {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .capibara-imagen {
+    width: 50px;
   }
 }

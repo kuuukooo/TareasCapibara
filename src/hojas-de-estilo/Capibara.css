@@ -113,3 +113,15 @@
     opacity: 0;
   }
 }
+
+@media (max-width: 768px) {
+  .capibara-imagen {
+    width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .capibara-imagen {
+    width: 60px;
+  }
+}
